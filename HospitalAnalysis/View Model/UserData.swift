@@ -19,19 +19,17 @@ import SwiftUI
 ///
 
 
-//let sample = EvalIndicator(指标名称: "门诊人次数与出院人次数比", 指标定义: "", 计算方法: "", 指标说明: "", 指标意义: "", 指标导向: "监测对比", 计量单位: "比值", 数据责任科室: "医务科")
-
 
 final class UserData<Element: NamedEntity>: ObservableObject  {
-    var dh: DataIOHelper<Element>
-    var sample: Element
-    var filename: String
+    //var dh: DataIOHelper<Element>
+    var sample: Element!
+    var filename: String = "\(Element.self)".lowercased() + "s.json"
     
     @Published var showKeysOnly = false
-    @Published var elements: Array<Element> {//= elementData {
+    @Published var elements: Array<Element>! {//= elementData {
         didSet {
             DispatchQueue.global(qos: .userInitiated).async {
-                self.dh.save(self.elements)
+                self.save(self.elements)
             }
         }
     }
@@ -39,9 +37,12 @@ final class UserData<Element: NamedEntity>: ObservableObject  {
     init(filename: String, sample: Element) {
         self.sample = sample
         self.filename = filename
-        self.dh = DataIOHelper<Element>(filename: filename)
-        self.elements = self.dh.load(sample)
+        
+        // we can do this since sample, filename, and elements have already been initialized with nil
+        self.elements = self.load(sample)
     }
+    
+    
     func addElement(_ newName: String) -> Void {
         for each in elements {
             if each.name == newName {
@@ -52,7 +53,64 @@ final class UserData<Element: NamedEntity>: ObservableObject  {
         elements.append(sample)
     }
     
+    let vapper: Bool = true
+    let dev = true
     
+    func load(_ sample: Element) -> Array<Element> {
+        let data: Data
+        let file: URL
+        if FileManager().fileExists(atPath: filename) {
+            file = URL(fileURLWithPath: filename)
+        } else if vapper {
+            return [sample]
+        } else {
+            file = Bundle.main.url(forResource: filename, withExtension: nil)!
+        }
+        
+        //    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
+        //        else {
+        //            fatalError("Couldn't find \(filename) in main bundle.")
+        //    }
+        
+        do {
+            data = try Data(contentsOf: file)
+        } catch {
+            fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
+        }
+        
+        do {
+            let decoder = JSONDecoder()
+            return try decoder.decode(Array<Element>.self, from: data)
+        } catch {
+            if dev {
+                return [sample]
+            }
+            else {
+                fatalError("Couldn't parse \(filename) as \(Element.self):\n\(error)")
+            }
+            
+            
+        }
+    }
+    
+    func save(_ data: Array<Element>) {
+        //let dir = FileManager.default.currentDirectoryPath
+        let file = URL(fileURLWithPath: filename)
+        
+        let encoder = JSONEncoder()
+        guard let json = try? encoder.encode(data) else {
+            fatalError("Couldn't encode data")
+        }
+        
+        do {
+            //try FileManager().copyItem(atPath: filename, toPath: filename + ".backup.md")
+            
+            try json.write(to: file)
+        }
+        catch {
+            fatalError("Couldn't save to \(filename) in main bundle")
+        }
+    }
 }
 
 
