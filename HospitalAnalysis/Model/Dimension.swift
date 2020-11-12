@@ -20,5 +20,10 @@ struct Dimension: Codable,Identifiable,Hashable,Loopable {
     // exclusive
     var dimensions: Array<Dimension>?
     var indicators: Array<EvalIndicator>?
+    
+    var pinyin: String {
+        name.applyingTransform(.toLatin, reverse: false) ?? name
+    }
+    
 }
 

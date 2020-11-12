@@ -8,10 +8,12 @@
 
 import Foundation
 
-protocol NamedEntity: Codable {
+protocol NamedEntity: Codable,Identifiable,Hashable {
+    var id: UUID {get set}
     var name: String {get set}
     static var sample: Self {get}
     var favor: Bool {get set}
+    var pinyin: String {get}
 }
 
 func generalName<GeneralElement>(_ ge: GeneralElement) -> String {

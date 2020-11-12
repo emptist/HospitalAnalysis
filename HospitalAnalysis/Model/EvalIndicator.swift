@@ -45,7 +45,8 @@ struct EvalIndicator: Codable,Identifiable,Hashable,Loopable,NamedEntity {
     var pinyin: String {
         return name.applyingTransform(.toLatin, reverse: false) ?? name
     }
-    var name: String {
+    var name: String
+    {
         get {
             指标名称
         }

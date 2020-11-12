@@ -14,8 +14,8 @@ struct ElementList<GeneralElement: NamedEntity>: View {
     //@Binding var filter: FilterType
     
     var body: some View {
-        List { //(selection: $selectedElement) {
-            ForEach(userData.elements.sorted(by: { ela, elb in ela.pinyin < elb.pinyin })) { element in
+        List (selection: $selectedElement) {
+            ForEach(userData.elements) { element in
                 if (!self.userData.showKeysOnly || element.favor){
                     ElementRow(element:element)
                         .tag(element)
