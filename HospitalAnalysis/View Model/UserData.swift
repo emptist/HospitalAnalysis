@@ -20,13 +20,14 @@ import SwiftUI
 
 
 
-final class UserData<Element: NamedEntity>: ObservableObject  {
-    //var dh: DataIOHelper<Element>
-    var sample: Element!
-    var filename: String = "\(Element.self)".lowercased() + "s.json"
+final class UserData<GeneralElement: NamedEntity>: ObservableObject  {
+    //var dh: DataIOHelper<GeneralElement>
+    var sample = GeneralElement.sample
+    
+    let filename: String = "\(GeneralElement.self)".lowercased() + "s.json"
     
     @Published var showKeysOnly = false
-    @Published var elements: Array<Element>! {//= elementData {
+    @Published var elements: Array<GeneralElement>! {//= elementData {
         didSet {
             DispatchQueue.global(qos: .userInitiated).async {
                 self.save(self.elements)
@@ -34,11 +35,7 @@ final class UserData<Element: NamedEntity>: ObservableObject  {
         }
     }
 
-    init(filename: String, sample: Element) {
-        self.sample = sample
-        self.filename = filename
-        
-        // we can do this since sample, filename, and elements have already been initialized with nil
+    init() {
         self.elements = self.load(sample)
     }
     
@@ -56,7 +53,7 @@ final class UserData<Element: NamedEntity>: ObservableObject  {
     let vapper: Bool = true
     let dev = true
     
-    func load(_ sample: Element) -> Array<Element> {
+    func load(_ sample: GeneralElement) -> Array<GeneralElement> {
         let data: Data
         let file: URL
         if FileManager().fileExists(atPath: filename) {
@@ -80,20 +77,20 @@ final class UserData<Element: NamedEntity>: ObservableObject  {
         
         do {
             let decoder = JSONDecoder()
-            return try decoder.decode(Array<Element>.self, from: data)
+            return try decoder.decode(Array<GeneralElement>.self, from: data)
         } catch {
             if dev {
                 return [sample]
             }
             else {
-                fatalError("Couldn't parse \(filename) as \(Element.self):\n\(error)")
+                fatalError("Couldn't parse \(filename) as \(GeneralElement.self):\n\(error)")
             }
             
             
         }
     }
     
-    func save(_ data: Array<Element>) {
+    func save(_ data: Array<GeneralElement>) {
         //let dir = FileManager.default.currentDirectoryPath
         let file = URL(fileURLWithPath: filename)
         
