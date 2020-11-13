@@ -34,7 +34,14 @@ final class UserData<GeneralElement: NamedEntityWithSample>: ObservableObject  {
             }
         }
     }
-
+    @Published var selectedElement: GeneralElement?
+    
+    var selectedIndex: Int {
+        elements.firstIndex(where: {
+            $0.id == selectedElement?.id
+        }) ?? 0
+    }
+    
     init() {
         self.elements = self.load(GeneralElement.sampleInstance)
     }

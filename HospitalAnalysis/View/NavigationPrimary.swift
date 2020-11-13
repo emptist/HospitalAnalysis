@@ -10,7 +10,7 @@ import SwiftUI
 
 struct NavigationPrimary<GeneralElement: NamedEntityWithSample>: View {
     @EnvironmentObject var userData: UserData<GeneralElement>
-    @Binding var selectedElement: GeneralElement?
+    //@Binding var selectedElement: GeneralElement?
     
     @State var newName: String = ""
     
@@ -25,7 +25,8 @@ struct NavigationPrimary<GeneralElement: NamedEntityWithSample>: View {
     
     var body: some View {
         VStack {
-            ElementList(selectedElement: $selectedElement)
+            ElementList<GeneralElement>()
+            //ElementList(selectedElement: $selectedElement)
                 .listStyle(SidebarListStyle())
             
             
@@ -46,8 +47,8 @@ struct NavigationPrimary<GeneralElement: NamedEntityWithSample>: View {
                 Button(action: {
                     //self.addItem()
                     self.userData.addElement(self.newName)
-                    self.selectedElement = self.userData.elements.first(where: {
-                        $0.name == self.newName
+                    //self.selectedElement = self.userData.elements.first(where: {
+                    self.userData.selectedElement = self.userData.elements.first(where: {    $0.name == self.newName
                     })
                 }) {
                     Text("Add")
@@ -62,6 +63,8 @@ struct NavigationPrimary<GeneralElement: NamedEntityWithSample>: View {
 struct NavigationPrimary_Previews: PreviewProvider {
     static var previews: some View {
         let userData = UserData<EvalIndicator>()
-        return NavigationPrimary<EvalIndicator>(selectedElement: .constant(userData.elements[0])).environmentObject(userData)
+        return NavigationPrimary<EvalIndicator>(
+            //selectedElement: .constant(userData.elements[0])
+        ).environmentObject(userData)
     }
 }

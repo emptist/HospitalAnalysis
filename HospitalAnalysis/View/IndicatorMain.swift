@@ -9,19 +9,16 @@
 import SwiftUI
 
 
-struct MainView: View {
+struct IndicatorMain: View {
     @EnvironmentObject var userData: UserData<EvalIndicator>
     
-//    var selectedIndex: Int {
-//        userData.elements.firstIndex(where: {
-//            //$0.id == self.selectedElement?.id
-//            $0.id == self.userData.selectedElement?.id
-//        }) ?? 0
-//    }
-//    
+    var selectedIndex: Int {
+        userData.elements.firstIndex(where: { $0.id == self.userData.selectedElement?.id }) ?? 0
+    }
+    
     var body: some View {
         NavigationView {
-            NavigationPrimary<EvalIndicator>()
+            NavigationPrimary<EvalIndicator>()//(selectedElement: $selectedElement)
             
             //NavigationTab(selectedIndex: selectedIndex)
         }
@@ -30,9 +27,9 @@ struct MainView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct IndicatorMain_Previews: PreviewProvider {
     static var previews: some View {
-        MainView().environmentObject(UserData<EvalIndicator>())
+        IndicatorMain().environmentObject(UserData<EvalIndicator>())
     }
 }
 

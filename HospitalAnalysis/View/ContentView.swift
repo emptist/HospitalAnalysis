@@ -8,10 +8,15 @@
 
 import SwiftUI
 
+var numberFormatter: NumberFormatter {
+    let f = NumberFormatter()
+    f.numberStyle = .decimal
+    return f
+}
+
 struct ContentView: View {
     var body: some View {
-        IndicatorMain().environmentObject(UserData<EvalIndicator>())
-        //Text("Hello, World!").frame(maxWidth: .infinity, maxHeight: .infinity)
+        MainView().environmentObject(UserData<EvalIndicator>())
     }
 }
 
