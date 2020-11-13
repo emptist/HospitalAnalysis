@@ -11,7 +11,7 @@ import SwiftUI
 
 struct IndicatorMain: View {
     var body: some View {
-        MainView<EvalIndicator>().environmentObject(UserData<EvalIndicator>())
+        ElementMain<EvalIndicator>().environmentObject(UserData<EvalIndicator>())
     }
 }
 

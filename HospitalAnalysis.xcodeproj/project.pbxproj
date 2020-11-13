@@ -17,6 +17,7 @@
 		4858611A255D0952003E56BC /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48586119255D0952003E56BC /* LabeledTextField.swift */; };
 		48E71B42255F1F820024FDCE /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E71B41255F1F820024FDCE /* NavigationTab.swift */; };
 		48E71B44255F24090024FDCE /* ElementTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E71B43255F24090024FDCE /* ElementTab.swift */; };
+		48E71B46255F29B10024FDCE /* ElementMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E71B45255F29B10024FDCE /* ElementMain.swift */; };
 		48F1ACB4255D0CA600EE86B3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1ACB3255D0CA600EE86B3 /* MainView.swift */; };
 		48F1ACB6255D0D3500EE86B3 /* NavigationPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1ACB5255D0D3500EE86B3 /* NavigationPrimary.swift */; };
 		48F7EDE2255BC618001189CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F7EDE1255BC618001189CF /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 		48586119255D0952003E56BC /* LabeledTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
 		48E71B41255F1F820024FDCE /* NavigationTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTab.swift; sourceTree = "<group>"; };
 		48E71B43255F24090024FDCE /* ElementTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementTab.swift; sourceTree = "<group>"; };
+		48E71B45255F29B10024FDCE /* ElementMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementMain.swift; sourceTree = "<group>"; };
 		48F1ACB3255D0CA600EE86B3 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		48F1ACB5255D0D3500EE86B3 /* NavigationPrimary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationPrimary.swift; sourceTree = "<group>"; };
 		48F7EDDE255BC618001189CF /* HospitalAnalysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HospitalAnalysis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				48F1ACB3255D0CA600EE86B3 /* MainView.swift */,
+				48E71B45255F29B10024FDCE /* ElementMain.swift */,
 				480CB145255E305300E38FDE /* IndicatorMain.swift */,
 			);
 			path = "Instance View";
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				480CB146255E305300E38FDE /* IndicatorMain.swift in Sources */,
+				48E71B46255F29B10024FDCE /* ElementMain.swift in Sources */,
 				48586118255D093F003E56BC /* ElementList.swift in Sources */,
 				48F1ACB4255D0CA600EE86B3 /* MainView.swift in Sources */,
 				48F1ACB6255D0D3500EE86B3 /* NavigationPrimary.swift in Sources */,

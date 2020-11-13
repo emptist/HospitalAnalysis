@@ -13,11 +13,12 @@ struct MainView<GeneralElement: NamedEntityWithSample>: View {
     @EnvironmentObject var userData: UserData<GeneralElement>
     
     var body: some View {
-        NavigationView {
-            NavigationPrimary<GeneralElement>()
-            
-            ElementTab<GeneralElement>()
-        }
+        NavigationTab<GeneralElement>()
+//        NavigationView {
+//            NavigationPrimary<GeneralElement>()
+//            
+//            NavigationTab<GeneralElement>()
+//        }
         //.frame(minWidth: 700, minHeight: 400)
         
     }
