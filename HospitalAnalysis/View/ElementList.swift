@@ -15,18 +15,16 @@ struct ElementList<GeneralElement: NamedEntityWithSample  >: View {
     
     var body: some View {
         List (selection: $selectedElement) {
-            ForEach(userData.elements) { element in
+            ForEach(userData.elements.sorted { $0.name < $1.name }) { element in
                 if (!self.userData.showKeysOnly || element.favor){
                     ElementRow(element:element)
                         .tag(element)
                         .onTapGesture(count: 2) {
                             guard let ele = self.selectedElement else {
-                                print("selected \(self.selectedElement?.id ?? UUID())")
                                 return
                             }
 
-                            print("selected item id: \(ele.id) name: \(ele.name)")
-//                            self.userData.elements.removeAll(where: {element in element.id == ele.id})
+                            print("name: \(ele.name) id: \(ele.id)")
 
                             guard let idx = self.userData.elements.firstIndex(of: ele) else {
                                 return
@@ -36,7 +34,7 @@ struct ElementList<GeneralElement: NamedEntityWithSample  >: View {
                             
                             if idx > 0 {
                                 self.selectedElement = self.userData.elements[idx-1]
-                            } else {
+                            } else if idx < self.userData.elements.count - 1 {
                                 self.selectedElement = self.userData.elements[idx+1]
                             }
                             
