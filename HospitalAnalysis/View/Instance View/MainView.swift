@@ -16,7 +16,7 @@ struct MainView<GeneralElement: NamedEntityWithSample>: View {
         NavigationView {
             NavigationPrimary<GeneralElement>()
             
-            //NavigationTab(selectedIndex: selectedIndex)
+            ElementTab<GeneralElement>()
         }
         //.frame(minWidth: 700, minHeight: 400)
         

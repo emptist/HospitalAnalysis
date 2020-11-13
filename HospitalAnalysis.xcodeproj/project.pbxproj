@@ -15,6 +15,8 @@
 		48586116255D0933003E56BC /* ElementRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48586115255D0933003E56BC /* ElementRow.swift */; };
 		48586118255D093F003E56BC /* ElementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48586117255D093F003E56BC /* ElementList.swift */; };
 		4858611A255D0952003E56BC /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48586119255D0952003E56BC /* LabeledTextField.swift */; };
+		48E71B42255F1F820024FDCE /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E71B41255F1F820024FDCE /* NavigationTab.swift */; };
+		48E71B44255F24090024FDCE /* ElementTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E71B43255F24090024FDCE /* ElementTab.swift */; };
 		48F1ACB4255D0CA600EE86B3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1ACB3255D0CA600EE86B3 /* MainView.swift */; };
 		48F1ACB6255D0D3500EE86B3 /* NavigationPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1ACB5255D0D3500EE86B3 /* NavigationPrimary.swift */; };
 		48F7EDE2255BC618001189CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F7EDE1255BC618001189CF /* AppDelegate.swift */; };
@@ -36,6 +38,8 @@
 		48586115255D0933003E56BC /* ElementRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementRow.swift; sourceTree = "<group>"; };
 		48586117255D093F003E56BC /* ElementList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementList.swift; sourceTree = "<group>"; };
 		48586119255D0952003E56BC /* LabeledTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
+		48E71B41255F1F820024FDCE /* NavigationTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTab.swift; sourceTree = "<group>"; };
+		48E71B43255F24090024FDCE /* ElementTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementTab.swift; sourceTree = "<group>"; };
 		48F1ACB3255D0CA600EE86B3 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		48F1ACB5255D0D3500EE86B3 /* NavigationPrimary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationPrimary.swift; sourceTree = "<group>"; };
 		48F7EDDE255BC618001189CF /* HospitalAnalysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HospitalAnalysis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +69,7 @@
 		480CB14B255ED63B00E38FDE /* NavigationSider */ = {
 			isa = PBXGroup;
 			children = (
+				48E71B41255F1F820024FDCE /* NavigationTab.swift */,
 				48F1ACB5255D0D3500EE86B3 /* NavigationPrimary.swift */,
 				48586115255D0933003E56BC /* ElementRow.swift */,
 				48586117255D093F003E56BC /* ElementList.swift */,
@@ -75,6 +80,7 @@
 		480CB14C255ED68000E38FDE /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				48E71B43255F24090024FDCE /* ElementTab.swift */,
 				480CB149255ED3C300E38FDE /* ElementView.swift */,
 			);
 			path = Details;
@@ -245,11 +251,13 @@
 				48F1ACB4255D0CA600EE86B3 /* MainView.swift in Sources */,
 				48F1ACB6255D0D3500EE86B3 /* NavigationPrimary.swift in Sources */,
 				480CB14A255ED3C300E38FDE /* ElementView.swift in Sources */,
+				48E71B42255F1F820024FDCE /* NavigationTab.swift in Sources */,
 				48F7EE07255BCF2C001189CF /* OptionalTextField.swift in Sources */,
 				48F7EE01255BCE92001189CF /* EvalIndicator.swift in Sources */,
 				48586114255CE2BD003E56BC /* NamedEntity.swift in Sources */,
 				48586116255D0933003E56BC /* ElementRow.swift in Sources */,
 				4830A9F4255CCFE700DB4CBB /* UserData.swift in Sources */,
+				48E71B44255F24090024FDCE /* ElementTab.swift in Sources */,
 				48F7EDE4255BC618001189CF /* ContentView.swift in Sources */,
 				4830A9F2255CCCEF00DB4CBB /* Dimension.swift in Sources */,
 				48F7EE06255BCF2C001189CF /* PropertyLoopable.swift in Sources */,

@@ -12,10 +12,10 @@ struct ElementView<GeneralElement: NamedEntityWithSample>: View {
     @EnvironmentObject var userData: UserData<GeneralElement>
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Group {
-                //TextField("id",text: $userData.elements[userData.selectedIndex].id)
-                //    .hLabel(label: "ID")
+                Text("ID: \(userData.elements[userData.selectedIndex].id)")
+                
                 
                 TextField("name",text: $userData.elements[userData.selectedIndex].name)
                     .hLabel(label: "Name")
@@ -40,6 +40,6 @@ struct ElementView<GeneralElement: NamedEntityWithSample>: View {
 
 //struct ElementView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        ElementView<GeneralElement> NamedEntityWithSample>()
+//        ElementView<EvalIndicator>().environmentObject(UserData<EvalIndicator>())
 //    }
 //}

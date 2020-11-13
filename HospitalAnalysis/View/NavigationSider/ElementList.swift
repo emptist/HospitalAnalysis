@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ElementList<GeneralElement: NamedEntityWithSample  >: View {
+struct ElementList<GeneralElement: NamedEntityWithSample>: View {
     @EnvironmentObject private var userData: UserData<GeneralElement>
     
     var body: some View {
@@ -42,6 +42,9 @@ struct ElementList<GeneralElement: NamedEntityWithSample  >: View {
             }
         }
     }
+}
+
+
 //    @Binding var selectedElement: GeneralElement?
 //
 //    var body: some View {
@@ -75,5 +78,5 @@ struct ElementList<GeneralElement: NamedEntityWithSample  >: View {
 //            }
 //        }
 //    }
-}
+
 
