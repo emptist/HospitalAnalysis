@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ElementRow<GeneralElement: NamedEntity>: View {
     var element: GeneralElement
+    
     var body: some View {
         
         HStack(alignment: .center, spacing:12) {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		480CB146255E305300E38FDE /* IndicatorMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CB145255E305300E38FDE /* IndicatorMain.swift */; };
+		480CB14A255ED3C300E38FDE /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CB149255ED3C300E38FDE /* ElementView.swift */; };
 		4830A9F2255CCCEF00DB4CBB /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4830A9F1255CCCEF00DB4CBB /* Dimension.swift */; };
 		4830A9F4255CCFE700DB4CBB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4830A9F3255CCFE700DB4CBB /* UserData.swift */; };
 		48586114255CE2BD003E56BC /* NamedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48586113255CE2BD003E56BC /* NamedEntity.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		480CB145255E305300E38FDE /* IndicatorMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorMain.swift; sourceTree = "<group>"; };
+		480CB149255ED3C300E38FDE /* ElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementView.swift; sourceTree = "<group>"; };
 		4830A9F1255CCCEF00DB4CBB /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		4830A9F3255CCFE700DB4CBB /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		48586113255CE2BD003E56BC /* NamedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamedEntity.swift; sourceTree = "<group>"; };
@@ -60,16 +62,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		48586112255CDCD1003E56BC /* View */ = {
+		480CB14B255ED63B00E38FDE /* NavigationSider */ = {
 			isa = PBXGroup;
 			children = (
-				48F7EDE3255BC618001189CF /* ContentView.swift */,
-				48F1ACB3255D0CA600EE86B3 /* MainView.swift */,
 				48F1ACB5255D0D3500EE86B3 /* NavigationPrimary.swift */,
 				48586115255D0933003E56BC /* ElementRow.swift */,
 				48586117255D093F003E56BC /* ElementList.swift */,
-				48586119255D0952003E56BC /* LabeledTextField.swift */,
+			);
+			path = NavigationSider;
+			sourceTree = "<group>";
+		};
+		480CB14C255ED68000E38FDE /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				480CB149255ED3C300E38FDE /* ElementView.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		480CB14D255ED8C600E38FDE /* Instance View */ = {
+			isa = PBXGroup;
+			children = (
+				48F1ACB3255D0CA600EE86B3 /* MainView.swift */,
 				480CB145255E305300E38FDE /* IndicatorMain.swift */,
+			);
+			path = "Instance View";
+			sourceTree = "<group>";
+		};
+		48586112255CDCD1003E56BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				480CB14D255ED8C600E38FDE /* Instance View */,
+				480CB14B255ED63B00E38FDE /* NavigationSider */,
+				480CB14C255ED68000E38FDE /* Details */,
+				48F7EDE3255BC618001189CF /* ContentView.swift */,
+				48586119255D0952003E56BC /* LabeledTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,6 +244,7 @@
 				48586118255D093F003E56BC /* ElementList.swift in Sources */,
 				48F1ACB4255D0CA600EE86B3 /* MainView.swift in Sources */,
 				48F1ACB6255D0D3500EE86B3 /* NavigationPrimary.swift in Sources */,
+				480CB14A255ED3C300E38FDE /* ElementView.swift in Sources */,
 				48F7EE07255BCF2C001189CF /* OptionalTextField.swift in Sources */,
 				48F7EE01255BCE92001189CF /* EvalIndicator.swift in Sources */,
 				48586114255CE2BD003E56BC /* NamedEntity.swift in Sources */,

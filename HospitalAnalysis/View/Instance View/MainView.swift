@@ -9,12 +9,12 @@
 import SwiftUI
 
 
-struct MainView: View {
-    @EnvironmentObject var userData: UserData<EvalIndicator>
+struct MainView<GeneralElement: NamedEntityWithSample>: View {
+    @EnvironmentObject var userData: UserData<GeneralElement>
     
     var body: some View {
         NavigationView {
-            NavigationPrimary<EvalIndicator>()
+            NavigationPrimary<GeneralElement>()
             
             //NavigationTab(selectedIndex: selectedIndex)
         }
@@ -25,7 +25,7 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView().environmentObject(UserData<EvalIndicator>())
+        MainView<EvalIndicator>().environmentObject(UserData<EvalIndicator>())
     }
 }
 
