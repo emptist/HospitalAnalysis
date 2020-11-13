@@ -10,7 +10,7 @@ import Foundation
 
 
 
-struct EvalIndicator: Codable,Identifiable,Hashable,Loopable,NamedEntityWithSample {
+struct EvalIndicator: NamedEntityWithSample {
     // 每次均应提供不同的 instance
     // 若须固定,则可在 view model class 内设置变量以记忆之
     static var sampleInstance: EvalIndicator {

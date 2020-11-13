@@ -8,7 +8,9 @@
 
 import Foundation
 
-protocol NamedEntity: Codable,Identifiable,Hashable {
+// CaseIterable
+
+protocol NamedEntity: Codable,Identifiable,Hashable,Loopable {
     var id: UUID {get set}
     var name: String {get set}
     
