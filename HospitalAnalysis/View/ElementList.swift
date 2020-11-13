@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ElementList<GeneralElement: NamedEntity>: View {
+struct ElementList<GeneralElement: NamedEntityWithSample  >: View {
     @EnvironmentObject private var userData: UserData<GeneralElement>
     @Binding var selectedElement: GeneralElement?
     //@Binding var filter: FilterType
@@ -21,12 +21,25 @@ struct ElementList<GeneralElement: NamedEntity>: View {
                         .tag(element)
                         .onTapGesture(count: 2) {
                             guard let ele = self.selectedElement else {
+                                print("selected \(self.selectedElement?.id ?? UUID())")
                                 return
                             }
+
+                            print("selected item id: \(ele.id) name: \(ele.name)")
+//                            self.userData.elements.removeAll(where: {element in element.id == ele.id})
+
                             guard let idx = self.userData.elements.firstIndex(of: ele) else {
                                 return
                             }
-                            self.userData.elements.remove(at: idx) //(where:{element in element.指标名称 == self.selectedElement?.指标名称})
+                            
+                            self.userData.elements.remove(at: idx)
+                            
+                            if idx > 0 {
+                                self.selectedElement = self.userData.elements[idx-1]
+                            } else {
+                                self.selectedElement = self.userData.elements[idx+1]
+                            }
+                            
                     }
                 }
                 

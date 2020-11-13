@@ -20,9 +20,9 @@ import SwiftUI
 
 
 
-final class UserData<GeneralElement: NamedEntity>: ObservableObject  {
+final class UserData<GeneralElement: NamedEntityWithSample>: ObservableObject  {
     //var dh: DataIOHelper<GeneralElement>
-    var sample = GeneralElement.sample
+    //var sampleInstance = GeneralElement.sampleInstance
     
     let filename: String = "\(GeneralElement.self)".lowercased() + "s.json"
     
@@ -36,7 +36,7 @@ final class UserData<GeneralElement: NamedEntity>: ObservableObject  {
     }
 
     init() {
-        self.elements = self.load(sample)
+        self.elements = self.load(GeneralElement.sampleInstance)
     }
     
     
@@ -46,20 +46,21 @@ final class UserData<GeneralElement: NamedEntity>: ObservableObject  {
                 return
             }
         }
-        sample.name = newName
-        elements.append(sample)
+        var sampleInstance = GeneralElement.sampleInstance
+        sampleInstance.name = newName
+        elements.append(sampleInstance)
     }
     
     let vapper: Bool = true
     let dev = true
     
-    func load(_ sample: GeneralElement) -> Array<GeneralElement> {
+    func load(_ sampleInstance: GeneralElement) -> Array<GeneralElement> {
         let data: Data
         let file: URL
         if FileManager().fileExists(atPath: filename) {
             file = URL(fileURLWithPath: filename)
         } else if vapper {
-            return [sample]
+            return [sampleInstance]
         } else {
             file = Bundle.main.url(forResource: filename, withExtension: nil)!
         }
@@ -80,7 +81,7 @@ final class UserData<GeneralElement: NamedEntity>: ObservableObject  {
             return try decoder.decode(Array<GeneralElement>.self, from: data)
         } catch {
             if dev {
-                return [sample]
+                return [sampleInstance]
             }
             else {
                 fatalError("Couldn't parse \(filename) as \(GeneralElement.self):\n\(error)")

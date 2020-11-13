@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct NavigationPrimary<GeneralElement: NamedEntity>: View {
+struct NavigationPrimary<GeneralElement: NamedEntityWithSample>: View {
     @EnvironmentObject var userData: UserData<GeneralElement>
     @Binding var selectedElement: GeneralElement?
     
@@ -21,7 +21,6 @@ struct NavigationPrimary<GeneralElement: NamedEntity>: View {
             }
         }
         self.userData.addElement(newName)
-//        self.userData.elements.append(HIndicator(指标名称: newName, 指标定义: "a", 计算方法: "bc", 指标说明: "c", 指标意义: "d", 指标导向: .监测比较, 指标属性: .定性指标, 计量单位: .比值, 指标来源: .医院填报, 指标解释: .省级卫健委, 所属体系: [.国考三级,.艾力彼排名体系]))
     }
     
     var body: some View {
