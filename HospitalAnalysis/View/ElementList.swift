@@ -10,7 +10,6 @@ import SwiftUI
 
 struct ElementList<GeneralElement: NamedEntityWithSample  >: View {
     @EnvironmentObject private var userData: UserData<GeneralElement>
-    //@Binding var selectedElement: GeneralElement?
     
     var body: some View {
         List (selection: $userData.selectedElement) {
@@ -23,7 +22,7 @@ struct ElementList<GeneralElement: NamedEntityWithSample  >: View {
                                 return
                             }
                             
-                            print("name: \(ele.name) id: \(ele.id)")
+                            //print("name: \(ele.name) id: \(ele.id)")
                             
                             guard let idx = self.userData.elements.firstIndex(of: ele) else {
                                 return

@@ -18,7 +18,7 @@ struct MainView: View {
             
             //NavigationTab(selectedIndex: selectedIndex)
         }
-        .frame(minWidth: 700, minHeight: 400)
+        //.frame(minWidth: 700, minHeight: 400)
         
     }
 }

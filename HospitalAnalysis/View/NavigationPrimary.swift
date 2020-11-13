@@ -41,13 +41,11 @@ struct NavigationPrimary<GeneralElement: NamedEntityWithSample>: View {
 //                }
                 
                 TextField("Add " + "\(GeneralElement.self)", text: $newName)
-                Button(action: {self.userData.addElement(self.newName)}) {
-                    Text("Add")
-                }
+                Button(action: {self.userData.addElement(self.newName)}) {Text("Add")}
             }.padding()
             
         }
-            .frame(minWidth: 225, maxWidth: 300)
+            //.frame(minWidth: 225, maxWidth: 300)
     }
 }
 
