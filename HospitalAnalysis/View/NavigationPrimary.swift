@@ -29,9 +29,9 @@ struct NavigationPrimary<GeneralElement: NamedEntityWithSample>: View {
             
             HStack {
                 
-//                制作报告
+//                //制作报告
 //                Button(action: {
-//                    guard let selectedElement = self.selectedElement else {
+//                    guard let selectedElement = self.userData.selectedElement else {
 //                        return self.userData.saveReport()
 //                    }
 //                    self.userData.saveReport(selectedElement)
@@ -41,9 +41,7 @@ struct NavigationPrimary<GeneralElement: NamedEntityWithSample>: View {
 //                }
                 
                 TextField("Add " + "\(GeneralElement.self)", text: $newName)
-                Button(action: {
-                    self.userData.addElement(self.newName)
-                                    }) {
+                Button(action: {self.userData.addElement(self.newName)}) {
                     Text("Add")
                 }
             }.padding()

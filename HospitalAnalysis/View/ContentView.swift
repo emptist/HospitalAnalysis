@@ -8,16 +8,16 @@
 
 import SwiftUI
 
-var numberFormatter: NumberFormatter {
-    let f = NumberFormatter()
-    f.numberStyle = .decimal
-    return f
-}
-
 struct ContentView: View {
     var body: some View {
         MainView().environmentObject(UserData<EvalIndicator>())
     }
+}
+
+var numberFormatter: NumberFormatter {
+    let f = NumberFormatter()
+    f.numberStyle = .decimal
+    return f
 }
 
 

@@ -71,6 +71,7 @@ final class UserData<GeneralElement: NamedEntityWithSample>: ObservableObject  {
             file = Bundle.main.url(forResource: filename, withExtension: nil)!
         }
         
+        // main bundle not working?
         //    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
         //        else {
         //            fatalError("Couldn't find \(filename) in main bundle.")
