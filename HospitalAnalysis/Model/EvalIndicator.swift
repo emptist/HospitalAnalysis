@@ -14,27 +14,35 @@ struct EvalIndicator: Codable,Identifiable,Hashable,Loopable,NamedEntityWithSamp
     // 每次均应提供不同的 instance
     // 若须固定,则可在 view model class 内设置变量以记忆之
     static var sampleInstance: EvalIndicator {
-        EvalIndicator(指标名称: "default", 指标定义: "", 计算方法: "", 指标说明: "", 指标意义: "", 指标导向: "", 计量单位: "", 数据责任科室: "")
+        EvalIndicator(name: "default")
     }
     
-    var 指标名称: String
-    var 指标定义: String
-    var 计算方法: String
-    var 指标说明: String
-    var 指标意义: String
+    var name: String
+    var favor: Bool = false
+    var id = UUID()
+
+    var 指标名称: String {
+        name
+    }
+    var 指标定义: String = ""
+    var 计算方法: String = ""
+    var 指标说明: String = ""
+    var 指标意义: String = ""
     
-    var 指标导向: String // 逐步提高/降低/监测对比
-    var 指标属性: String = "定量"
-    var 计量单位: String // 比值
-    var 指标来源: String = "医院填报"
-    var 数据责任科室: String
-    var 指标解释: String = "艾力彼"
-    var 所属体系: String = "艾力彼"
+    var 指标导向: String = "" // 逐步提高/降低/监测对比
+    var 指标属性: String = ""
+    var 计量单位: String = ""
+    var 指标来源: String = ""
+    var 数据责任科室: String = ""
+    var 指标解释: String = ""
+    var 所属体系: String = ""
     var weight: Double = 0
     var valueY_1: Double = 0
     var valueY_2: Double = 0
     var valueY_3: Double = 0
+
     
+
 //    // enums
 //    var 指标导向: 指标导向
 //    var 指标属性: 指标属性
@@ -42,22 +50,9 @@ struct EvalIndicator: Codable,Identifiable,Hashable,Loopable,NamedEntityWithSamp
 //    var 指标来源: 指标来源
 //    var 指标解释: 绩效考核机构
 //    var 所属体系: Array<考评体系>
-//
-    var favor: Bool = false
-    var id = UUID()
-    
+
     var pinyin: String {
         return name.applyingTransform(.toLatin, reverse: false) ?? name
-    }
-    var name: String
-    {
-        get {
-            指标名称
-        }
-        set {
-            指标名称 = newValue
-        }
-        
     }
     
 }
