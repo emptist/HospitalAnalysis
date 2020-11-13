@@ -49,13 +49,12 @@ final class UserData<GeneralElement: NamedEntityWithSample>: ObservableObject  {
     
     func addElement(_ newName: String) -> Void {
         for each in elements {
-            if each.name == newName {
-                return
-            }
+            if each.name == newName { return }
         }
         var sampleInstance = GeneralElement.sampleInstance
         sampleInstance.name = newName
         elements.append(sampleInstance)
+        selectedElement = elements.first {$0.id == sampleInstance.id}
     }
     
     let vapper: Bool = true

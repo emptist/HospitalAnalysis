@@ -12,13 +12,6 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject var userData: UserData<EvalIndicator>
     
-//    var selectedIndex: Int {
-//        userData.elements.firstIndex(where: {
-//            //$0.id == self.selectedElement?.id
-//            $0.id == self.userData.selectedElement?.id
-//        }) ?? 0
-//    }
-//    
     var body: some View {
         NavigationView {
             NavigationPrimary<EvalIndicator>()

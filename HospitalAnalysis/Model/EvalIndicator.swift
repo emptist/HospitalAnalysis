@@ -11,8 +11,10 @@ import Foundation
 
 
 struct EvalIndicator: Codable,Identifiable,Hashable,Loopable,NamedEntityWithSample {
+    // 每次均应提供不同的 instance
+    // 若须固定,则可在 view model class 内设置变量以记忆之
     static var sampleInstance: EvalIndicator {
-        EvalIndicator(指标名称: "new indicator", 指标定义: "", 计算方法: "", 指标说明: "", 指标意义: "", 指标导向: "", 计量单位: "", 数据责任科室: "")
+        EvalIndicator(指标名称: "default", 指标定义: "", 计算方法: "", 指标说明: "", 指标意义: "", 指标导向: "", 计量单位: "", 数据责任科室: "")
     }
     
     var 指标名称: String
