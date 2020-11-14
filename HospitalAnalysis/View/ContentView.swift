@@ -10,7 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        IndicatorMain()
+        //IndicatorMain()
+        NavigationTab<EvalIndicator>().environmentObject(UserData<EvalIndicator>())
     }
 }
 

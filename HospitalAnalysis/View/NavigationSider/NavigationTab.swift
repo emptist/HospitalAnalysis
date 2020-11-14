@@ -19,7 +19,7 @@ struct NavigationTab<GeneralElement: NamedEntityWithSample>: View {
             
             TabView {
                 ElementMain<GeneralElement>()
-                    .tabItem {Text("\(GeneralElement.sampleInstance.name)")}
+                    .tabItem {Text("\(userData.elements[userData.selectedIndex].name)")}
                     .padding()
             }
         }
