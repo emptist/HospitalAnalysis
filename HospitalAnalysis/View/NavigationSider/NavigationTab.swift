@@ -13,14 +13,11 @@ struct NavigationTab<GeneralElement: NamedEntityWithSample>: View {
     
     
     var body: some View {
-        //VStack(alignment: .leading, spacing: 12) {
         VStack {
-            //DetailHead(elementIndex:selectedIndex)
-            
             TabView {
-                ElementMain<GeneralElement>()
+                ElementView<GeneralElement>()
                     .tabItem {Text("\(userData.elements[userData.selectedIndex].name)")}
-                    .padding()
+                    //.padding()
             }
         }
     }

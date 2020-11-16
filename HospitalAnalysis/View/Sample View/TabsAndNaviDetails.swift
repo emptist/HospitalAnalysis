@@ -1,14 +1,14 @@
 //
-//  ElementTab.swift
+//  TabsAndNaviDetails.swift
 //  HospitalAnalysis
 //
-//  Created by jk on 2020/11/14.
+//  Created by jk on 2020/11/16.
 //  Copyright © 2020 ssl. All rights reserved.
 //
 
 import SwiftUI
 
-struct ElementTab<GeneralElement: NamedEntityWithSample>: View {
+struct TabsAndNaviDetails<GeneralElement: NamedEntityWithSample>: View {
     @EnvironmentObject var userData: UserData<GeneralElement>
     
     
@@ -18,16 +18,19 @@ struct ElementTab<GeneralElement: NamedEntityWithSample>: View {
             //DetailHead(elementIndex:selectedIndex)
             
             TabView {
-                ElementView<GeneralElement>()
+                NaviAndDetails<GeneralElement>()
                     .tabItem {Text("\(userData.elements[userData.selectedIndex].name)")}
-                    //.padding()
+                
+                NaviAndDetails<GeneralElement>()
+                    .tabItem {Text("\(userData.elements[userData.selectedIndex].name)")}
+                
             }
         }
     }
 }
 
-struct ElementTab_Previews: PreviewProvider {
+struct TabsAndNaviDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ElementTab<EvalIndicator>().environmentObject(UserData<EvalIndicator>())
+        TabsAndNaviDetails<EvalIndicator>().environmentObject(UserData<EvalIndicator>())
     }
 }

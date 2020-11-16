@@ -15,6 +15,10 @@
 		48586116255D0933003E56BC /* ElementRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48586115255D0933003E56BC /* ElementRow.swift */; };
 		48586118255D093F003E56BC /* ElementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48586117255D093F003E56BC /* ElementList.swift */; };
 		4858611A255D0952003E56BC /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48586119255D0952003E56BC /* LabeledTextField.swift */; };
+		48DB747E2561D4CD00EAD9E5 /* NaviAndTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB747D2561D4CD00EAD9E5 /* NaviAndTabs.swift */; };
+		48DB748025621D7100EAD9E5 /* TabsAndNaviTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB747F25621D7100EAD9E5 /* TabsAndNaviTabs.swift */; };
+		48DB748225621F5700EAD9E5 /* NaviAndDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB748125621F5700EAD9E5 /* NaviAndDetails.swift */; };
+		48DB7485256224C900EAD9E5 /* TabsAndNaviDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB7484256224C900EAD9E5 /* TabsAndNaviDetails.swift */; };
 		48E71B42255F1F820024FDCE /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E71B41255F1F820024FDCE /* NavigationTab.swift */; };
 		48E71B44255F24090024FDCE /* ElementTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E71B43255F24090024FDCE /* ElementTab.swift */; };
 		48E71B46255F29B10024FDCE /* ElementMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E71B45255F29B10024FDCE /* ElementMain.swift */; };
@@ -39,6 +43,10 @@
 		48586115255D0933003E56BC /* ElementRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementRow.swift; sourceTree = "<group>"; };
 		48586117255D093F003E56BC /* ElementList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementList.swift; sourceTree = "<group>"; };
 		48586119255D0952003E56BC /* LabeledTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
+		48DB747D2561D4CD00EAD9E5 /* NaviAndTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviAndTabs.swift; sourceTree = "<group>"; };
+		48DB747F25621D7100EAD9E5 /* TabsAndNaviTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsAndNaviTabs.swift; sourceTree = "<group>"; };
+		48DB748125621F5700EAD9E5 /* NaviAndDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviAndDetails.swift; sourceTree = "<group>"; };
+		48DB7484256224C900EAD9E5 /* TabsAndNaviDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsAndNaviDetails.swift; sourceTree = "<group>"; };
 		48E71B41255F1F820024FDCE /* NavigationTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTab.swift; sourceTree = "<group>"; };
 		48E71B43255F24090024FDCE /* ElementTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementTab.swift; sourceTree = "<group>"; };
 		48E71B45255F29B10024FDCE /* ElementMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementMain.swift; sourceTree = "<group>"; };
@@ -101,13 +109,33 @@
 		48586112255CDCD1003E56BC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				48DB74832562236A00EAD9E5 /* Main View */,
+				48DB747C2561D3BF00EAD9E5 /* Sample View */,
 				480CB14D255ED8C600E38FDE /* Instance View */,
 				480CB14B255ED63B00E38FDE /* NavigationSider */,
 				480CB14C255ED68000E38FDE /* Details */,
-				48F7EDE3255BC618001189CF /* ContentView.swift */,
 				48586119255D0952003E56BC /* LabeledTextField.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		48DB747C2561D3BF00EAD9E5 /* Sample View */ = {
+			isa = PBXGroup;
+			children = (
+				48DB747D2561D4CD00EAD9E5 /* NaviAndTabs.swift */,
+				48DB747F25621D7100EAD9E5 /* TabsAndNaviTabs.swift */,
+				48DB748125621F5700EAD9E5 /* NaviAndDetails.swift */,
+				48DB7484256224C900EAD9E5 /* TabsAndNaviDetails.swift */,
+			);
+			path = "Sample View";
+			sourceTree = "<group>";
+		};
+		48DB74832562236A00EAD9E5 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				48F7EDE3255BC618001189CF /* ContentView.swift */,
+			);
+			path = "Main View";
 			sourceTree = "<group>";
 		};
 		48F7EDD5255BC618001189CF = {
@@ -249,6 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48DB747E2561D4CD00EAD9E5 /* NaviAndTabs.swift in Sources */,
+				48DB748025621D7100EAD9E5 /* TabsAndNaviTabs.swift in Sources */,
 				480CB146255E305300E38FDE /* IndicatorMain.swift in Sources */,
 				48E71B46255F29B10024FDCE /* ElementMain.swift in Sources */,
 				48586118255D093F003E56BC /* ElementList.swift in Sources */,
@@ -256,8 +286,10 @@
 				48F1ACB6255D0D3500EE86B3 /* NavigationPrimary.swift in Sources */,
 				480CB14A255ED3C300E38FDE /* ElementView.swift in Sources */,
 				48E71B42255F1F820024FDCE /* NavigationTab.swift in Sources */,
+				48DB748225621F5700EAD9E5 /* NaviAndDetails.swift in Sources */,
 				48F7EE07255BCF2C001189CF /* OptionalTextField.swift in Sources */,
 				48F7EE01255BCE92001189CF /* EvalIndicator.swift in Sources */,
+				48DB7485256224C900EAD9E5 /* TabsAndNaviDetails.swift in Sources */,
 				48586114255CE2BD003E56BC /* NamedEntity.swift in Sources */,
 				48586116255D0933003E56BC /* ElementRow.swift in Sources */,
 				4830A9F4255CCFE700DB4CBB /* UserData.swift in Sources */,

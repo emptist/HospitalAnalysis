@@ -42,7 +42,8 @@ struct NavigationPrimary<GeneralElement: NamedEntityWithSample>: View {
                 
                 TextField("Add " + "\(GeneralElement.self)", text: $newName)
                 Button(action: {self.userData.addElement(self.newName)}) {Text("Add")}
-            }.padding()
+            }
+            //.padding()
             
         }
             //.frame(minWidth: 225, maxWidth: 300)

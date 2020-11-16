@@ -29,7 +29,7 @@ struct ElementRow<GeneralElement: NamedEntity>: View {
                     .frame(width: 10, height: 10)
             }            
         }
-        .padding(.vertical,4)
+        //.padding(.vertical,4)
     }
 }
 
