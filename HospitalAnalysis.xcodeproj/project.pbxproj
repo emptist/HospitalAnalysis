@@ -19,6 +19,7 @@
 		48DB748025621D7100EAD9E5 /* TabsAndNaviTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB747F25621D7100EAD9E5 /* TabsAndNaviTabs.swift */; };
 		48DB748225621F5700EAD9E5 /* NaviAndDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB748125621F5700EAD9E5 /* NaviAndDetails.swift */; };
 		48DB7485256224C900EAD9E5 /* TabsAndNaviDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB7484256224C900EAD9E5 /* TabsAndNaviDetails.swift */; };
+		48DB74DC25625C7D00EAD9E5 /* AppSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB74DB25625C7D00EAD9E5 /* AppSection.swift */; };
 		48E71B42255F1F820024FDCE /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E71B41255F1F820024FDCE /* NavigationTab.swift */; };
 		48E71B44255F24090024FDCE /* ElementTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E71B43255F24090024FDCE /* ElementTab.swift */; };
 		48E71B46255F29B10024FDCE /* ElementMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E71B45255F29B10024FDCE /* ElementMain.swift */; };
@@ -47,6 +48,7 @@
 		48DB747F25621D7100EAD9E5 /* TabsAndNaviTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsAndNaviTabs.swift; sourceTree = "<group>"; };
 		48DB748125621F5700EAD9E5 /* NaviAndDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviAndDetails.swift; sourceTree = "<group>"; };
 		48DB7484256224C900EAD9E5 /* TabsAndNaviDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsAndNaviDetails.swift; sourceTree = "<group>"; };
+		48DB74DB25625C7D00EAD9E5 /* AppSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSection.swift; sourceTree = "<group>"; };
 		48E71B41255F1F820024FDCE /* NavigationTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTab.swift; sourceTree = "<group>"; };
 		48E71B43255F24090024FDCE /* ElementTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementTab.swift; sourceTree = "<group>"; };
 		48E71B45255F29B10024FDCE /* ElementMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementMain.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				4830A9F3255CCFE700DB4CBB /* UserData.swift */,
+				48DB74DB25625C7D00EAD9E5 /* AppSection.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			files = (
 				48DB747E2561D4CD00EAD9E5 /* NaviAndTabs.swift in Sources */,
 				48DB748025621D7100EAD9E5 /* TabsAndNaviTabs.swift in Sources */,
+				48DB74DC25625C7D00EAD9E5 /* AppSection.swift in Sources */,
 				480CB146255E305300E38FDE /* IndicatorMain.swift in Sources */,
 				48E71B46255F29B10024FDCE /* ElementMain.swift in Sources */,
 				48586118255D093F003E56BC /* ElementList.swift in Sources */,
