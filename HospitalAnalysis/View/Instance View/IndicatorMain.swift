@@ -11,10 +11,10 @@ import SwiftUI
 
 struct IndicatorMain: View {
     var body: some View {
-        TabsAndNaviDetails<EvalIndicator>()
-            .environmentObject(UserData<EvalIndicator>())
+//        TabsAndNaviDetails<EvalIndicator>()
+//            .environmentObject(UserData<EvalIndicator>())
 
-        //ElementMain<EvalIndicator>().environmentObject(UserData<EvalIndicator>())
+        ElementMain<EvalIndicator>().environmentObject(UserData<EvalIndicator>())
     }
 }
 

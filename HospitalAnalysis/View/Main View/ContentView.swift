@@ -11,7 +11,6 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         IndicatorMain()
-        //NavigationTab<EvalIndicator>().environmentObject(UserData<EvalIndicator>())
     }
 }
 
