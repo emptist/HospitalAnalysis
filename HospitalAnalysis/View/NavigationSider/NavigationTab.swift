@@ -15,9 +15,10 @@ struct NavigationTab<GeneralElement: NamedEntityWithSample>: View {
     var body: some View {
         VStack {
             TabView {
-                ElementView<GeneralElement>()
-                    .tabItem {Text("\(userData.elements[userData.selectedIndex].name)")}
-                    //.padding()
+                Text("简单演示")
+                    .tabItem {
+                        Text("综合评价")
+                }
             }
         }
     }

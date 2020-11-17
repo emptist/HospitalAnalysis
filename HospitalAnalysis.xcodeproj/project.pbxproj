@@ -15,6 +15,11 @@
 		48586116255D0933003E56BC /* ElementRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48586115255D0933003E56BC /* ElementRow.swift */; };
 		48586118255D093F003E56BC /* ElementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48586117255D093F003E56BC /* ElementList.swift */; };
 		4858611A255D0952003E56BC /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48586119255D0952003E56BC /* LabeledTextField.swift */; };
+		4859B978256368E800FC4223 /* HospitalEvaluate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4859B977256368E800FC4223 /* HospitalEvaluate.swift */; };
+		4859B97A256369A700FC4223 /* DepartmentEvaluate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4859B979256369A700FC4223 /* DepartmentEvaluate.swift */; };
+		4859B97C25636A9500FC4223 /* ComprehensiveIndicators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4859B97B25636A9500FC4223 /* ComprehensiveIndicators.swift */; };
+		4859B97E25636AB100FC4223 /* SpecializedIndicators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4859B97D25636AB100FC4223 /* SpecializedIndicators.swift */; };
+		4859B98025636E8800FC4223 /* MainTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4859B97F25636E8800FC4223 /* MainTabs.swift */; };
 		48DB747E2561D4CD00EAD9E5 /* NaviAndTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB747D2561D4CD00EAD9E5 /* NaviAndTabs.swift */; };
 		48DB748025621D7100EAD9E5 /* TabsAndNaviTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB747F25621D7100EAD9E5 /* TabsAndNaviTabs.swift */; };
 		48DB748225621F5700EAD9E5 /* NaviAndDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB748125621F5700EAD9E5 /* NaviAndDetails.swift */; };
@@ -44,6 +49,11 @@
 		48586115255D0933003E56BC /* ElementRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementRow.swift; sourceTree = "<group>"; };
 		48586117255D093F003E56BC /* ElementList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementList.swift; sourceTree = "<group>"; };
 		48586119255D0952003E56BC /* LabeledTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
+		4859B977256368E800FC4223 /* HospitalEvaluate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalEvaluate.swift; sourceTree = "<group>"; };
+		4859B979256369A700FC4223 /* DepartmentEvaluate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentEvaluate.swift; sourceTree = "<group>"; };
+		4859B97B25636A9500FC4223 /* ComprehensiveIndicators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprehensiveIndicators.swift; sourceTree = "<group>"; };
+		4859B97D25636AB100FC4223 /* SpecializedIndicators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecializedIndicators.swift; sourceTree = "<group>"; };
+		4859B97F25636E8800FC4223 /* MainTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabs.swift; sourceTree = "<group>"; };
 		48DB747D2561D4CD00EAD9E5 /* NaviAndTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviAndTabs.swift; sourceTree = "<group>"; };
 		48DB747F25621D7100EAD9E5 /* TabsAndNaviTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsAndNaviTabs.swift; sourceTree = "<group>"; };
 		48DB748125621F5700EAD9E5 /* NaviAndDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviAndDetails.swift; sourceTree = "<group>"; };
@@ -111,6 +121,7 @@
 		48586112255CDCD1003E56BC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4859B976256368B500FC4223 /* Content Part */,
 				48DB74832562236A00EAD9E5 /* Main View */,
 				48DB747C2561D3BF00EAD9E5 /* Sample View */,
 				480CB14D255ED8C600E38FDE /* Instance View */,
@@ -119,6 +130,18 @@
 				48586119255D0952003E56BC /* LabeledTextField.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4859B976256368B500FC4223 /* Content Part */ = {
+			isa = PBXGroup;
+			children = (
+				4859B97F25636E8800FC4223 /* MainTabs.swift */,
+				4859B977256368E800FC4223 /* HospitalEvaluate.swift */,
+				4859B979256369A700FC4223 /* DepartmentEvaluate.swift */,
+				4859B97B25636A9500FC4223 /* ComprehensiveIndicators.swift */,
+				4859B97D25636AB100FC4223 /* SpecializedIndicators.swift */,
+			);
+			path = "Content Part";
 			sourceTree = "<group>";
 		};
 		48DB747C2561D3BF00EAD9E5 /* Sample View */ = {
@@ -286,20 +309,25 @@
 				480CB146255E305300E38FDE /* IndicatorMain.swift in Sources */,
 				48E71B46255F29B10024FDCE /* ElementMain.swift in Sources */,
 				48586118255D093F003E56BC /* ElementList.swift in Sources */,
+				4859B97E25636AB100FC4223 /* SpecializedIndicators.swift in Sources */,
 				48F1ACB4255D0CA600EE86B3 /* MainView.swift in Sources */,
 				48F1ACB6255D0D3500EE86B3 /* NavigationPrimary.swift in Sources */,
 				480CB14A255ED3C300E38FDE /* ElementView.swift in Sources */,
 				48E71B42255F1F820024FDCE /* NavigationTab.swift in Sources */,
 				48DB748225621F5700EAD9E5 /* NaviAndDetails.swift in Sources */,
 				48F7EE07255BCF2C001189CF /* OptionalTextField.swift in Sources */,
+				4859B978256368E800FC4223 /* HospitalEvaluate.swift in Sources */,
 				48F7EE01255BCE92001189CF /* EvalIndicator.swift in Sources */,
 				48DB7485256224C900EAD9E5 /* TabsAndNaviDetails.swift in Sources */,
 				48586114255CE2BD003E56BC /* NamedEntity.swift in Sources */,
+				4859B97C25636A9500FC4223 /* ComprehensiveIndicators.swift in Sources */,
 				48586116255D0933003E56BC /* ElementRow.swift in Sources */,
 				4830A9F4255CCFE700DB4CBB /* UserData.swift in Sources */,
+				4859B98025636E8800FC4223 /* MainTabs.swift in Sources */,
 				48E71B44255F24090024FDCE /* ElementTab.swift in Sources */,
 				48F7EDE4255BC618001189CF /* ContentView.swift in Sources */,
 				4830A9F2255CCCEF00DB4CBB /* Dimension.swift in Sources */,
+				4859B97A256369A700FC4223 /* DepartmentEvaluate.swift in Sources */,
 				48F7EE06255BCF2C001189CF /* PropertyLoopable.swift in Sources */,
 				48F7EDE2255BC618001189CF /* AppDelegate.swift in Sources */,
 				4858611A255D0952003E56BC /* LabeledTextField.swift in Sources */,
