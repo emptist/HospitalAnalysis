@@ -13,8 +13,8 @@ import Foundation
 struct EvalIndicator: NamedEntityWithSample {
     // 每次均应提供不同的 instance
     // 若须固定,则可在 view model class 内设置变量以记忆之
-    static var sampleInstance: EvalIndicator {
-        EvalIndicator(name: "default")
+    static var sampleInstance: Self {
+        Self(name: "default")
     }
     
     var name: String

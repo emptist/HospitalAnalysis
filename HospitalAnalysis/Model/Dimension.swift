@@ -9,7 +9,11 @@
 import Foundation
 
 
-struct Dimension: NamedEntity {//Codable,Identifiable,Hashable,Loopable {
+struct Dimension: NamedEntityWithSample {//Codable,Identifiable,Hashable,Loopable {
+    static var sampleInstance: Self {
+        Self(name: "default")
+    }
+    
     var name: String
     
     var id = UUID()
