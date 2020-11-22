@@ -1,5 +1,5 @@
 //
-//  Dimension.swift
+//  IndicatorDimension.swift
 //  HospitalAnalysis
 //
 //  Created by jk on 2020/11/12.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct Dimension: NamedEntityWithSample {//Codable,Identifiable,Hashable,Loopable {
+struct IndicatorDimension: NamedEntityWithSample {//Codable,Identifiable,Hashable,Loopable {
     static var sampleInstance: Self {
         Self(name: "default")
     }
@@ -25,7 +25,7 @@ struct Dimension: NamedEntityWithSample {//Codable,Identifiable,Hashable,Loopabl
     var valueY3: Double = 0
     
     // exclusive
-    var dimensions: Array<Dimension>? = Array<Dimension>()
+    var dimensions: Array<IndicatorDimension>? = Array<IndicatorDimension>()
     var indicators: Array<EvalIndicator>? = Array<EvalIndicator>()
     
     var pinyin: String {

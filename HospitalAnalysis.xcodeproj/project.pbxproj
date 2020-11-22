@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		480CB146255E305300E38FDE /* IndicatorMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CB145255E305300E38FDE /* IndicatorMain.swift */; };
 		480CB14A255ED3C300E38FDE /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CB149255ED3C300E38FDE /* ElementView.swift */; };
-		4830A9F2255CCCEF00DB4CBB /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4830A9F1255CCCEF00DB4CBB /* Dimension.swift */; };
+		4830A9F2255CCCEF00DB4CBB /* IndicatorDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4830A9F1255CCCEF00DB4CBB /* IndicatorDimension.swift */; };
 		4830A9F4255CCFE700DB4CBB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4830A9F3255CCFE700DB4CBB /* UserData.swift */; };
 		48586114255CE2BD003E56BC /* NamedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48586113255CE2BD003E56BC /* NamedEntity.swift */; };
 		48586116255D0933003E56BC /* ElementRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48586115255D0933003E56BC /* ElementRow.swift */; };
@@ -43,7 +43,7 @@
 /* Begin PBXFileReference section */
 		480CB145255E305300E38FDE /* IndicatorMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorMain.swift; sourceTree = "<group>"; };
 		480CB149255ED3C300E38FDE /* ElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementView.swift; sourceTree = "<group>"; };
-		4830A9F1255CCCEF00DB4CBB /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
+		4830A9F1255CCCEF00DB4CBB /* IndicatorDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorDimension.swift; sourceTree = "<group>"; };
 		4830A9F3255CCFE700DB4CBB /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		48586113255CE2BD003E56BC /* NamedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamedEntity.swift; sourceTree = "<group>"; };
 		48586115255D0933003E56BC /* ElementRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementRow.swift; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				48F7EDFE255BCE92001189CF /* EvalIndicator.swift */,
-				4830A9F1255CCCEF00DB4CBB /* Dimension.swift */,
+				4830A9F1255CCCEF00DB4CBB /* IndicatorDimension.swift */,
 				48586113255CE2BD003E56BC /* NamedEntity.swift */,
 			);
 			path = Model;
@@ -326,7 +326,7 @@
 				4859B98025636E8800FC4223 /* MainTabs.swift in Sources */,
 				48E71B44255F24090024FDCE /* ElementTab.swift in Sources */,
 				48F7EDE4255BC618001189CF /* ContentView.swift in Sources */,
-				4830A9F2255CCCEF00DB4CBB /* Dimension.swift in Sources */,
+				4830A9F2255CCCEF00DB4CBB /* IndicatorDimension.swift in Sources */,
 				4859B97A256369A700FC4223 /* DepartmentEvaluate.swift in Sources */,
 				48F7EE06255BCF2C001189CF /* PropertyLoopable.swift in Sources */,
 				48F7EDE2255BC618001189CF /* AppDelegate.swift in Sources */,
